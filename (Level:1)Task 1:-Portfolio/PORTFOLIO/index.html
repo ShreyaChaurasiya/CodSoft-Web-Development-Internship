@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya -Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(3, 3, 30);
+            color: white;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgba(30, 11, 138, 0.539);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            color: hsl(240, 59%, 74%);
+            font-size: 1.2rem;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(103 90 175 / 54%);
+            height: 3.5px;
+
+        }
+
+        .left {
+            font-size: 2rem;
+
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0px;
+
+        }
+
+
+        .firstsection div {
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        .button {
+            padding: 50px 0px;
+        }
+
+        .button .btn {
+            background: #4b4bcd;
+            color: white;
+            border: 1px solid #fbfbfb;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftsection {
+            font-size: 1.rem;
+            margin: 10%;
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 30px;
+        }
+
+        .purple {
+            color: blue;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(112, 112, 228);
+        }
+
+        .secondsection {
+            display: flex;
+            justify-content: space-around;
+            max-width: 60vw;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+
+            font-size: 4rem;
+            margin: 20px;
+
+        }
+
+        .secondleftsection img {
+            justify-content: right;
+            right: 70%;
+
+
+        }
+
+        .secondrightsection {
+            display: flex;
+            justify-content: left;
+            margin: 5px;
+        }
+
+        .thirdsection {
+            max-width: 250vw;
+            margin: 40px;
+            height: 100vh;
+
+        }
+
+        .thirdsection h2 {
+            font-size: 2rem;
+        }
+
+
+        .thirdsection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 40px;
+            display: flex;
+        }
+
+        .thirdsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0px 120px;
+
+        }
+
+        .image-top {
+            width: 40px;
+            position: relative;
+            top: -50px;
+            left: -8px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 50px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 70px;
+            color: rgb(51, 79, 8);
+            width: 150px;
+            font-size: 10px;
+        }
+
+        .fourthsection {
+            max-width: 60vw;
+            height: 80vw;
+        }
+
+        .fourthsection h3 {
+            text-align: center;
+            font-size: 60px;
+
+        }
+
+        .subtitle span {
+            color: rgb(123, 201, 228);
+        }
+
+        .fourthsection .section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .container1 {
+            width: 600px;
+            height: 500px;
+            padding: 75px 90px;
+            margin-left: 120px;
+        }
+
+        .fourthsection .heading {
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 5px;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        .bar {
+            font-size: 23px;
+        }
+
+        .Technical-bars .bar {
+            margin: 40px 0px;
+        }
+
+        .Technical-bars .bar:first-child {
+            margin-top: 0px;
+        }
+
+        .Technical-bars .bar:last-child {
+            margin-bottom: 0px;
+        }
+
+        .Technical-bars .bar .Info {
+            margin-bottom: 5px;
+        }
+
+        .Technical-bars info span {
+            font-size: 17px;
+            font-weight: 500;
+            animation: showText 1 3s linear forwards;
+            opacity: 0;
+        }
+
+        .progress-line {
+            position: relative;
+            border-radius: 10px;
+            width: 100%;
+            height: 10px;
+            background-color: white;
+            animation: animate cubic-bezier(1, 1, 0.565, 1)forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+
+        }
+
+        @keyframes animate {
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        .progress-line span {
+            height: 100%;
+            background-color: rgb(58, 176, 223);
+            animation: animate cubic-bezier(1, 1, 0.565, 1) cubic-bezier(1, 0, 0.5, 1)forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .progress-line .html span {
+            width: 5%;
+        }
+
+        .progress-line .java span {
+            width: 6%;
+        }
+
+        .progress-line .python span {
+            width: 7%;
+        }
+
+        .progress-line .Css span {
+            width: 4%;
+        }
+
+        .progress-line .javascript span {
+            width: 10%;
+        }
+
+        footer {
+            background-color: rgba(47, 3, 16, 0.724);
+            height: 220px;
+
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 40px 60px;
+        }
+
+        .footer-first {
+            font-size: 2rem;
+        }
+
+        .footer ul {
+            list-style-position: positional;
+            margin: 20px;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            display: flex;
+            justify-content: center;
+            text-decoration: center;
+            color: rgb(115, 112, 112);
+
+        }
+
+        .footer-fourth {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-fourth img {
+            display: flex;
+            justify-content: space-between;
+            width: 60px;
+            position: relative;
+            top: 10px;
+            right: -2px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shreya's Portfolio</div>
+            <div class="right"></div>
+            <ul>
+
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Service</a></li>
+                <li><a href="/">Skill</a></li>
+                <li><a href="/">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="lefttsection">
+                Hii, I am <span class="purple">
+                    Shreya Chaurasiya
+                </span>
+                <div>
+                    I am
+                    <span id="element"></span>
+                </div>
+                <>I am Proficient in HTML,CSS, Javascript with
+                    experience in windows<br>Environmenst
+                    committed to deliveing hight-quality and driving organzation growth.
+                    <div class="button">
+                        <button class="btn">Download Resume</button>
+                        <button class="btn">Visit Github</button>
+                    </div>
+            </div>
+            </div>
+
+
+            <div class="rightsection">
+                <img src="img/bg.png" alt="">
+            </div>
+
+
+        </section>
+        <section>
+            <hr>
+            <section class="secondsection">
+                <h1>About Me</h1>
+                <div class="secondrightsection">
+                    <img src="img/gg.png" alt="">
+                </div>
+                <div class="secondleftsection">
+                    Hi! I'm Shreya Chaurasiya, a college student, studing in Mahatma Jyotiba Phule
+                    RohilkhandUniversity(Bareilly).<br>I'm deeply passionate about web development. I've
+                    immersed myself in programming languages.<br>I love challenges and constantly seek opportunities to
+                    expand my skills.
+                    something amazing together!<br>I strongly believe that dedication and hard work are the keys to
+                    success, and I am determined to achieve my goals.
+
+
+
+                </div>
+            </section>
+        </section>
+        <hr>
+        <section class="thirdsection">
+            <span class="text-gray">What I have done so for</span>
+            <h2>Work Experiences</h2>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="img/java.webp" alt="">
+                    <div class="vertical-title">
+                        Java User(Programing Language)
+                    </div>
+                    <div class="vertical-desc">
+                        Java makes writing, compiling, and debugging programming easy. It helps to create reusable code
+                        and modular programs. Java is a class-based, object-oriented programming language and is
+                        designed to have as few implementation dependencies as possible.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="img/python.png" alt="">
+                    <div class="vertical-title">
+                        Python User(Programing Language)
+                    </div>
+                    <div class="vertical-desc">
+                        Python is a high-level, general-purpose, and very popular programming language. Python
+                        programming language (latest Python 3) is being used in web development, and Machine Learning
+                        applications, along with all cutting-edge technology in Software Industry. Python language is
+                        being used by almost all tech-giant companies like – Google, Amazon, Facebook, Instagram,
+                        Dropbox, Uber… etc.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="img/html.webp" alt="">
+                    <div class="vertical-title">
+                        Html Developer
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates enim mollitia hic nisi ullam
+                        repellendus in, consequatur quibusdam! Debitis deleniti quidem iste assumenda fuga fugit
+                        accusantium velit eos aperiam excepturi.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="img/Css.png" alt="">
+                    <div class="vertical-title">
+                        Html,Css Developer
+                    </div>
+                    <div class="vertical-desc">
+                        CSS (Cascading Style Sheets) is a language designed to simplify the process of making web pages
+                        presentable. It allows you to apply styles to HTML documents, describing how a webpage should
+                        look by prescribing colors, fonts, spacing, and positioning. CSS provides developers and
+                        designers with powerful control over the presentation of HTML elements.
+
+                        HTML uses tags and CSS uses rulesets. CSS styles are applied to the HTML element using
+                        selectors. CSS is easy to learn and understand, but it provides powerful control over the
+                        presentation of an HTML document.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fourthsection">
+            <h3 class="sub-titile">
+                MY<span>Skill</span>
+            </h3>
+            <section>
+                <div class="container1" id="Skill">
+                    <h3 class="heading1">Technical Skill</h3>
+                    <div class="Technical-bars">
+                        <div class="bar"><i class='bx bxl-html5'></i></div>
+                        <div class="Info">
+                        </div>
+                        <div class="progress-line" html>
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="bar"><i class='bx bxl-java'></i></div>
+                        <div class="Info">
+                        </div>
+                        <div class="progress-line" Java>
+                            <span>Java</span>
+                        </div>
+
+                        <div class="bar"><i class='bx bxl-python'></i></div>
+                        <div class="Info">
+                        </div>
+                        <div class="progress-line" python>
+                            <span>Python</span>
+                        </div>
+
+                        <div class="bar"><i class='bx bxl-css3'></i></div>
+                        <div class="Info">
+                        </div>
+                        <div class="progress-line" CSS>
+                            <span>CSS</span>
+                        </div>
+                        <div class="bar"><i class='bx bxl-javascript'></i></div>
+                        <div class="Info">
+                        </div>
+                        <div class="progress-line" javacsript>
+                            <span>Javascript</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h4>Shreya's Developer Portfolio</h4>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><ion-icon name="arrow-forward-outline"></ion-icon>Home </li>
+                    <li><ion-icon name="arrow-forward-outline"></ion-icon>Abouts</li>
+                    <li><ion-icon name="arrow-forward-outline"></ion-icon>Services</li>
+                    <li><ion-icon name="arrow-forward-outline"></ion-icon>Portofolio</li>
+                    <li><ion-icon name="arrow-forward-outline"></ion-icon>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Web Design</li>
+                    <li>Web Developer</li>
+                    <li>online class</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <img src="img/twitter.png" alt="">
+                <img src="img/facebook.png" alt="">
+                <img src="img/insta.png" alt="">
+                <img src="img/telegram.png" alt="">
+                <img src="img/youtube.png" alt="">
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169;shreyasportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['web Developer', 'Graphic Designer', 'Web Designer', 'Video Editior'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
